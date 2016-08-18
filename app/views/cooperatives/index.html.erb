@@ -1,0 +1,27 @@
+<p id="notice"><%= notice %></p>
+<div class="feed">
+  
+
+   <% @cooperatives.each do |cooperative| %>
+  
+  <div class="item shadow">
+   <%= link_to cooperative do %>
+  <div class="image">
+    <h1>Image (<%= cooperative.id %>)</h1>
+  </div>
+  <% end %>
+    <p><strong>name :</strong> <%= cooperative.name %></p>
+        <div class="actionbar">
+  <div class="left">
+    Like (8)
+  </div>
+    <div class="right">
+      <%= time_ago_in_words(cooperative.created_at)%>
+    </div>
+
+  </div>
+  </div>
+  
+  <% end %>
+
+

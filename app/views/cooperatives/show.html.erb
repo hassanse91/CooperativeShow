@@ -1,0 +1,24 @@
+<p id="notice"><%= notice %></p>
+<center>
+
+<div class="item-center">
+
+<div class="image">
+    <h1>Image (<%= @cooperative.id %>)</h1>
+  </div>
+
+  <h3>Name:</h3>
+  <h4><%= @cooperative.name %></h4>
+    <h3>Address:</h3>
+<h4><%= @cooperative.address %></h4>
+    <h3>Num telephone:</h3>
+<h4><%= @cooperative.numTel %></h4>
+  
+  
+  
+<div class="show-buttons">
+<%= link_to 'Edit', edit_cooperative_path(@cooperative), class: "btn btn-default" %> |
+<%= link_to 'Back', cooperatives_path, class: "btn btn-default" %>
+</div>
+</div>
+<center>
