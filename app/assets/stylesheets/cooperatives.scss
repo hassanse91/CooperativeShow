@@ -70,12 +70,12 @@
 .item-presentation {
     width: 400px;
     cursor: pointer;
-    display: inline-block;
     margin: 20px;
     padding: 20px;
     background-color: white;
     border-radius: 8px;
-    position: relative;
+    display: inline-block;
+    vertical-align: top;
 
     h2{
     margin: 0;
@@ -107,11 +107,46 @@
     .item-details {
 
     width: 64%;
-    display: inline-block;
     background-color: #F5D773;
     border-radius: 8px;
     padding: 20px;
-    position: relative;
+    margin-top: 20px;
+    display: inline-block;
+    vertical-align: top;
+    h3 {
+        color: black;
+
+    }
+    .video {
+        border-radius: 8px;
+    }
+    .item-show {
+        background-color: white;
+        font-size: 16px;
+        padding: 20px;
+        margin: 20px;
+        font-size: 20px;
+        text-align: left;
+        border-radius: 8px;
+    }
+    .item-activity{
+        background-color: white;
+        font-size: 16px;
+        padding: 20px;
+        margin: 20px;
+        font-size: 20px;
+        text-align: left;
+        border-radius: 8px;
+    }
+    .item-local  {
+          background-color: white;
+        font-size: 16px;
+        padding: 20px;
+        margin: 20px;
+        font-size: 20px;
+        text-align: left;
+        border-radius: 8px;
+    }
 
     }
 
@@ -122,11 +157,9 @@
 .list-items {
     width: 100%;
     cursor: pointer;
-    margin: 20px;
+    margin-top: 20px;
     padding: 20px;
     background-color: #F5D773;
     border-radius: 8px;
-    display: inline-block;
-    position: relative;
 
 }
