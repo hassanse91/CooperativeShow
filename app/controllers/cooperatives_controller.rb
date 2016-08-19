@@ -1,11 +1,16 @@
 class CooperativesController < ApplicationController
-  before_action :set_cooperative, only: [:show, :edit, :update, :destroy]
+  before_action :set_cooperative, only: [:show, :edit, :update, :destroy, :upvote, :downvote]
+    before_action :authenticate_user!, except: [:index, :show]
 
   # GET /cooperatives
   # GET /cooperatives.json
   def index
     @cooperatives = Cooperative.all.order("created_at desc")
 
+  end
+  
+  def popular
+    @cooperatives = Cooperative.all.order(cached_votes_up: :desc)
   end
 
   # GET /cooperatives/1
@@ -21,6 +26,16 @@ class CooperativesController < ApplicationController
 
   # GET /cooperatives/1/edit
   def edit
+  end
+
+  def upvote
+    @cooperative.upvote_from current_user
+    redirect_to cooperatives_path
+  end
+
+  def downvote
+    @cooperative.downvote_from current_user
+    redirect_to cooperatives_path
   end
 
   # POST /cooperatives

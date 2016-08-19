@@ -1,6 +1,12 @@
 Rails.application.routes.draw do
   devise_for :users
-  resources :cooperatives
+  resources :cooperatives do
+    member do 
+      put "like" => "cooperatives#upvote"
+      put "dislike" => "cooperatives#downvote"
+    end
+  end
+  get 'popular', to: 'cooperatives#popular'
   root 'cooperatives#index'
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

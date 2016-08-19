@@ -1,3 +1,4 @@
+
   <nav class="navbar navbar-default navbar-static-top">
       <div class="container">
         <div class="navbar-header">
@@ -11,11 +12,9 @@
           </div>
         <div id="navbar" class="navbar-collapse collapse">
           <ul class="nav navbar-nav">
-            <%= link_to root_path do %>
-             <li class="active">New</a></li>
-            <% end %>
+          <li><%= link_to "Recent",root_path %></li>
 
-            <li><a href="#about">Populaire</a></li>
+            <li><%= link_to "Popular", popular_path %></li>
             <li><a href="#contact">Les Plus visités</a></li>
             <li class="dropdown">
               <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Secteurs Activitées <span class="caret"></span></a>
@@ -32,8 +31,16 @@
           </ul>
           <ul class="nav navbar-nav navbar-right">
             <li><a href="../navbar/">twitter</a></li>
-            <li class="active"><a href="./">facebook share <span class="sr-only">(current)</span></a></li>
-            <li><a href="../navbar-fixed-top/">facebook likes</a></li>
+            <li>
+            <div class="face-share">
+               <iframe src="https://www.facebook.com/plugins/share_button.php?href=http%3A%2F%2Fcooperamaroc.herokuapp.com&layout=button_count&size=small&mobile_iframe=true&width=82&height=20&appId" width="82" height="20" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowTransparency="true"></iframe>
+            </div>
+             
+            </li>
+            <li> 
+            <div class="face-like">
+             <iframe src="https://www.facebook.com/plugins/like.php?href=https%3A%2F%2Fcooperamaroc.herokuapp.com&width=130&layout=button_count&action=like&size=small&show_faces=true&share=false" width="130" height="46" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowTransparency="true"></iframe>
+            </div> </li>
           </ul>
         </div><!--/.nav-collapse -->
       </div>

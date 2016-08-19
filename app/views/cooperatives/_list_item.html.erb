@@ -1,5 +1,6 @@
 <div class="feed">
   
+
    <% @cooperatives.each do |cooperative| %>
   
   <div class="item shadow">
@@ -12,9 +13,16 @@
     <p><strong>name :</strong> <%= cooperative.name %></p>
         <div class="actionbar">
   <div class="left">
-    Like (8)
+    <%= link_to like_cooperative_path(cooperative), class: "like", method: :put do %>
+      <button type="button" class="btn btn-info" >
+        <span class="glyphicon glyphicon-thumbs-up" aria-hidden="true"></span>
+        <span class="badge"><%= cooperative.get_upvotes.size %> </span>
+      </button>
+  
+    <% end %>
   </div>
     <div class="right">
+
       <%= time_ago_in_words(cooperative.created_at)%>
     </div>
 
@@ -23,4 +31,5 @@
   
   <% end %>
   </div>
+
   
