@@ -11,6 +11,10 @@
       </ul>
     </div>
   <% end %>
+  <% if @cooperative.image.blank? %>
+    <%= image_tag @cooperative.image.url() %>
+  <% end %>
+  <div class="form-group"> <%= f.input :image, class: "form-control"%></div>
   <div class="form-group"><%= f.input :name, class: "form-control"%></div>
   <div class="form-group"> <%= f.input :address, class: "form-control" %></div>
   <div class="form-group"><%= f.input :numTel, class: "form-control" %></div>

@@ -3,56 +3,16 @@
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
 
+/*
+ index file index.html.erb
+ */
 
-
- center{
-    text-align: -webkit-center;
-
-    a {
-    padding: 4px 12px 6px 12px;
-    border-radius: 4px;
-    cursor: pointer;
-    border: 1px solid #cddbee;
-    box-sizing: border-box;
-    background-color: white;
-    color: #364656;
-    text-decoration: none;
-    }
-
-    h2{
-    margin: 0;
-    margin-top: 20px;
-    font-size: 50px;
-    color: #364656;
-    font-weight: 300;
-    display: block;
-    -webkit-margin-before: 0.83em;
-    -webkit-margin-after: 0.83em;
-    -webkit-margin-start: 0px;
-    -webkit-margin-end: 0px;
-    }
-
-.item-center {
-    width: 400px;
-    cursor: pointer;
-    margin: 20px;
-    padding: 20px;
-    background-color: white;
-    border-radius: 8px;
-    display: inline-block;
-    position: relative;
-
-    .show-buttons {
-        margin: 5px;
-        float: left;
-        a{
-          font-size: 25px;  
-        }
-    }
-}
 .feed {
     text-align: center;
-}
+    div {
+        display: block;
+    }
+
 .item{
         margin: 30px;
     padding: 20px;
@@ -65,9 +25,8 @@
 .shadow {
         box-shadow: 0px 1px 1px 0px rgba(0,0,102,0.1);
 }
-.image {
+.image img {
     max-width: 100%;
-    padding-bottom: 100%;
     border-radius: 6px;
     position: relative;
     display: block;
@@ -99,5 +58,75 @@
     .item-left {
 
     }
+
+}
+
+/*
+ show page show.html.erb
+ */
+ center{
+    text-align: -webkit-center;
+
+.item-presentation {
+    width: 400px;
+    cursor: pointer;
+    display: inline-block;
+    margin: 20px;
+    padding: 20px;
+    background-color: white;
+    border-radius: 8px;
+    position: relative;
+
+    h2{
+    margin: 0;
+    margin-top: 20px;
+    font-size: 50px;
+    color: #364656;
+    font-weight: 300;
+    display: block;
+    -webkit-margin-before: 0.83em;
+    -webkit-margin-after: 0.83em;
+    -webkit-margin-start: 0px;
+    -webkit-margin-end: 0px;
+    }
+
+    .image img {
+    max-width: 100%;
+    border-radius: 6px;
+    position: relative;
+    display: block;
+    background-color: green;
+    }
+
+    a {
+     font-size: 20px; 
+     padding: 6px 53px;
+        }
+      
+}
+    .item-details {
+
+    width: 64%;
+    display: inline-block;
+    background-color: #F5D773;
+    border-radius: 8px;
+    padding: 20px;
+    position: relative;
+
+    }
+
+
+
+}
+
+.list-items {
+    width: 100%;
+    cursor: pointer;
+    margin: 20px;
+    padding: 20px;
+    background-color: #F5D773;
+    border-radius: 8px;
+    display: inline-block;
+    position: relative;
 
 }

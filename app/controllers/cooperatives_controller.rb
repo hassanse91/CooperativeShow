@@ -11,6 +11,7 @@ class CooperativesController < ApplicationController
   # GET /cooperatives/1
   # GET /cooperatives/1.json
   def show
+    @cooperatives = Cooperative.all.order("created_at desc")
   end
 
   # GET /cooperatives/new
@@ -70,6 +71,6 @@ class CooperativesController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def cooperative_params
-      params.require(:cooperative).permit(:name, :address, :numTel)
+      params.require(:cooperative).permit(:name, :address, :numTel, :image)
     end
 end

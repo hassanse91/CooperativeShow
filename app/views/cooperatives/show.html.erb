@@ -1,10 +1,10 @@
 <p id="notice"><%= notice %></p>
 <center>
 
-<div class="item-center">
+<div class="item-presentation">
 
 <div class="image">
-    <h1>Image (<%= @cooperative.id %>)</h1>
+    <%= image_tag @cooperative.image.url(:medium) %>
   </div>
 
   <h3>Name:</h3>
@@ -14,11 +14,51 @@
     <h3>Num telephone:</h3>
 <h4><%= @cooperative.numTel %></h4>
   
-  
-  
-<div class="show-buttons">
+
 <%= link_to 'Edit', edit_cooperative_path(@cooperative), class: "btn btn-default" %> |
 <%= link_to 'Back', cooperatives_path, class: "btn btn-default" %>
+
 </div>
+<div class="item-details">
+<div class="video">
+	<iframe width="300" height="200" src="https://www.youtube.com/embed/8SeRU_ZPDkE" frameborder="0" allowfullscreen></iframe>
 </div>
+	<div class="item-activity">
+		<h3>Activite:</h3>
+		<ul>
+			<li>Argan construction</li>
+			<li>production de huile d'olive</li>
+			<li>Aceuil des touriste</li>
+		</ul>
+	</div>
+
+	<div class="thumbnail">
+	<h3>Presentation: </h3>
+	
+		c'est une cooperative manifique avec une communication efficace avec les client c'est rare de trouver une tel comprehention avec des cooperative a ce temps la je suis fiere d'etre l'undes CEO de cette cooperative Merci 
+	</div>
+
+	<div class="item-facebook">
+		<h3>Facebook page</h3>
+		<%= link_to "Facebook", root_path %>
+	</div>
+
+	<div class="item-local">
+		<h3>Geolocalisation</h3>
+		<script src='https://maps.googleapis.com/maps/api/js?v=3.exp'></script><div style='overflow:hidden;height:150px;width:700px;'><div id='gmap_canvas' style='height:440px;width:700px;'></div><div><small><a href="http://www.embedgooglemaps.com">Generate your Google map here, quick and easy!</a></small></div><div><small><a href="https://top10geeks.com/top-10-best-running-shoes-men-2016/">With top10geeks.com, you can read everything about the best running shoes for men for the year 2016. We give insights in what is the best shoe to buy, by looking at it's qualities and value for money. However, it is important that you always try the shoe for yourself: you might have different preferences than what we are recommending. With our tips of the best running shoes for men, you cannot go wrong!</a></small></div><style>#gmap_canvas img{max-width:none!important;background:none!important}</style></div><script type='text/javascript'>function init_map(){var myOptions = {zoom:10,center:new google.maps.LatLng(30.4277547,-9.598107199999959),mapTypeId: google.maps.MapTypeId.ROADMAP};map = new google.maps.Map(document.getElementById('gmap_canvas'), myOptions);marker = new google.maps.Marker({map: map,position: new google.maps.LatLng(30.4277547,-9.598107199999959)});infowindow = new google.maps.InfoWindow({content:'<strong>Title</strong><br>agadir<br>'});google.maps.event.addListener(marker, 'click', function(){infowindow.open(map,marker);});infowindow.open(map,marker);}google.maps.event.addDomListener(window, 'load', init_map);</script>
+	</div>
+	<form action="">
+		<input type="text">
+		<input type="text">
+		<input type="text">
+		<input type="text">
+		<input type="text">
+	</form>
+</div>
+
 <center>
+<div class="list-items">
+	
+   <%= render 'cooperatives/list_item' %>
+ 
+</div>
