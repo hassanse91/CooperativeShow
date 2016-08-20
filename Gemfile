@@ -16,7 +16,6 @@ gem 'aws-sdk', '~> 2.3'
 
 # Use jquery as the JavaScript library
 gem 'jquery-rails'
-gem 'sqlite3'
 # Turbolinks makes following links in your web application faster. Read more: https://github.com/rails/turbolinks
 gem 'turbolinks'
 gem 'coffee-script-source', '1.8.0'
